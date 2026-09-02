@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #05070f;
+  --panel: rgba(8, 16, 36, 0.82);
+  --line: rgba(56, 189, 248, 0.22);
+  --cyan: #38bdf8;
+  --blue: #2563eb;
+  --glow: rgba(56, 189, 248, 0.45);
+  --text: #e8f4ff;
+  --muted: #8aa4c7;
+  --danger: #fb7185;
+  --ok: #34d399;
+}
+
+html,
+body {
+  background: radial-gradient(1200px 600px at 10% -10%, #12305a 0%, transparent 50%),
+    radial-gradient(900px 500px at 90% 10%, #0b1b4a 0%, transparent 45%),
+    var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 28px 48px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+
+.brand {
+  font-family: Orbitron, sans-serif;
+  letter-spacing: 0.16em;
+  font-size: 22px;
+  color: var(--cyan);
+  text-shadow: 0 0 18px var(--glow);
+}
+
+.subbrand {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.08);
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.kpi .value {
+  font-family: Orbitron, sans-serif;
+  font-size: 22px;
+  margin-top: 8px;
+  color: #f0f9ff;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.panel h3 {
+  font-family: Orbitron, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+  margin: 0 0 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Select-control,
+.Select-menu-outer,
+.dash-dropdown .Select-control {
+  background: #071225 !important;
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+}
+
+.dash-table-container {
+  font-size: 13px;
+}
+
+.status-warn {
+  color: var(--danger);
+}
+
+.status-ok {
+  color: var(--ok);
+}
+
+@media (max-width: 1100px) {
+  .kpi-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
